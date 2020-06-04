@@ -54,3 +54,5 @@ env.yml
 # ENV
 env.example
 .env
+
+service_information.txt

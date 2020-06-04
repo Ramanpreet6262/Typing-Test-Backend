@@ -2,8 +2,8 @@ service: typing-test-app
 
 custom:
   cors:
-    origin: '*'
-    headers: '*'
+    origin: "*"
+    headers: "*"
 
 # Create an optimized package for our functions
 package:
@@ -28,9 +28,10 @@ provider:
   #  SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
 
 functions:
-  hello:
-    handler: handler.hello
+  words:
+    handler: words.generateWords
     events:
       - http:
-          path: hello
+          path: words
           method: get
+          cors: true
